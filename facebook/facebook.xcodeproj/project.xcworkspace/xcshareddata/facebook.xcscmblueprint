@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "59A9F35339CB7D87004437A9DA86C0EDFC57DDF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "59A9F35339CB7D87004437A9DA86C0EDFC57DDF6" : 9223372036854775807,
+    "402EAB2ECDA1AD433DD6D4D69C632CD6CDC5B922" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "87CB58A3-1925-4AC9-8358-F04DD0AA5EC9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "59A9F35339CB7D87004437A9DA86C0EDFC57DDF6" : "facebook\/",
+    "402EAB2ECDA1AD433DD6D4D69C632CD6CDC5B922" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "facebook",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "facebook\/facebook.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pictureelectric\/hasticakes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "402EAB2ECDA1AD433DD6D4D69C632CD6CDC5B922"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pictureelectric\/facebook.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "59A9F35339CB7D87004437A9DA86C0EDFC57DDF6"
+    }
+  ]
+}
