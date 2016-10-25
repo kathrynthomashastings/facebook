@@ -19,7 +19,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     var image: UIImage!
     var selectedImageView: UIImageView!
     var lightboxTransition: LightboxTransition!
-
+    var scrollViewOriginalCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         imageView.image = image
         
+        scrollViewOriginalCenter = CGPoint(x: scrollView.center.x, y: scrollView.center.y)
         scrollView.contentSize = CGSize(width: 320, height: 600)
         scrollView.delegate = self
         self.view.backgroundColor = UIColor(white: 0, alpha: 1)
@@ -42,14 +43,16 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // This method is called as the user scrolls
-        self.view.backgroundColor = UIColor(white: 0, alpha: 0)
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        // This method is called as the user scrolls
+//    }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        donePanel.isHidden = true
-        photoActionsView.isHidden = true
+        UIView.animate(withDuration: 00.6) {
+            self.view.backgroundColor = UIColor(white: 0, alpha: 0)
+            self.donePanel.isHidden = true
+            self.photoActionsView.isHidden = true
+        }
     }
 
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -61,6 +64,10 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             self.view.backgroundColor = UIColor(white: 0, alpha: 1)
             donePanel.isHidden = false
             photoActionsView.isHidden = false
+            
+//            UIView.animate(withDuration:0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] ,
+//                           animations: { () -> Void in
+//            }, completion: nil)
         }
     }
     

@@ -45,30 +45,20 @@ class NewsFeedViewController: UIViewController {
     }
     
     @IBAction func didTapImage(_ sender: UITapGestureRecognizer) {
-        
         selectedImageView = sender.view as! UIImageView
-        
         performSegue(withIdentifier: "showImageSegue", sender: nil)
     }
-    
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let photoViewController = segue.destination as! PhotoViewController
 
         photoViewController.image = selectedImageView.image
-        
         photoViewController.modalPresentationStyle = UIModalPresentationStyle.custom
         lightboxTransition = LightboxTransition()
         photoViewController.transitioningDelegate = lightboxTransition
         lightboxTransition.duration = 00.3
-        
-        
-        // fadeTransition = FadeTransition()
-        // photoViewController.transitioningDelegate = fadeTransition
-        // fadeTransition.duration = 00.3
     }
 
 }
