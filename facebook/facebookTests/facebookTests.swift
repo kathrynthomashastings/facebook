@@ -1,15 +1,15 @@
 //
-//  facebookTests.swift
-//  facebookTests
+//  FacebookTests.swift
+//  FacebookTests
 //
-//  Created by Kathryn Hastings on 10/22/16.
-//  Copyright © 2016 Kathryn Hastings. All rights reserved.
+//  Created by Timothy Lee on 8/3/14.
+//  Copyright (c) 2014 codepath. All rights reserved.
 //
 
+import UIKit
 import XCTest
-@testable import facebook
 
-class facebookTests: XCTestCase {
+class FacebookTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,12 +23,12 @@ class facebookTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
+        self.measure() {
             // Put the code you want to measure the time of here.
         }
     }

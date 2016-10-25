@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD6BDE991DBC55D70033D9B1"
-               BuildableName = "facebook.app"
-               BlueprintName = "facebook"
-               ReferencedContainer = "container:facebook.xcodeproj">
+               BlueprintIdentifier = "4216764F198E3220008CCBC3"
+               BuildableName = "Facebook.app"
+               BlueprintName = "Facebook"
+               ReferencedContainer = "container:Facebook.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD6BDEAD1DBC55D80033D9B1"
-               BuildableName = "facebookTests.xctest"
-               BlueprintName = "facebookTests"
-               ReferencedContainer = "container:facebook.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD6BDEB81DBC55D80033D9B1"
-               BuildableName = "facebookUITests.xctest"
-               BlueprintName = "facebookUITests"
-               ReferencedContainer = "container:facebook.xcodeproj">
+               BlueprintIdentifier = "42167661198E3220008CCBC3"
+               BuildableName = "FacebookTests.xctest"
+               BlueprintName = "FacebookTests"
+               ReferencedContainer = "container:Facebook.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD6BDE991DBC55D70033D9B1"
-            BuildableName = "facebook.app"
-            BlueprintName = "facebook"
-            ReferencedContainer = "container:facebook.xcodeproj">
+            BlueprintIdentifier = "4216764F198E3220008CCBC3"
+            BuildableName = "Facebook.app"
+            BlueprintName = "Facebook"
+            ReferencedContainer = "container:Facebook.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD6BDE991DBC55D70033D9B1"
-            BuildableName = "facebook.app"
-            BlueprintName = "facebook"
-            ReferencedContainer = "container:facebook.xcodeproj">
+            BlueprintIdentifier = "4216764F198E3220008CCBC3"
+            BuildableName = "Facebook.app"
+            BlueprintName = "Facebook"
+            ReferencedContainer = "container:Facebook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD6BDE991DBC55D70033D9B1"
-            BuildableName = "facebook.app"
-            BlueprintName = "facebook"
-            ReferencedContainer = "container:facebook.xcodeproj">
+            BlueprintIdentifier = "4216764F198E3220008CCBC3"
+            BuildableName = "Facebook.app"
+            BlueprintName = "Facebook"
+            ReferencedContainer = "container:Facebook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
