@@ -21,6 +21,10 @@
 		429277A6198F392800E19641 /* CreatePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A5198F392800E19641 /* CreatePhotoViewController.swift */; };
 		429277A8198F393500E19641 /* CreateCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A7198F393500E19641 /* CreateCheckinViewController.swift */; };
 		CD21BA111DBDCBDA00362B02 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21BA101DBDCBDA00362B02 /* PhotoViewController.swift */; };
+		CD7C83D41DBEDBF60061331D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C83D11DBEDBF60061331D /* Common.swift */; };
+		CD7C83D51DBEDBF60061331D /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C83D21DBEDBF60061331D /* BaseTransition.swift */; };
+		CD7C83D61DBEDBF60061331D /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C83D31DBEDBF60061331D /* FadeTransition.swift */; };
+		CD7C83DB1DBEF0700061331D /* LightboxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C83DA1DBEF0700061331D /* LightboxTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		429277A5198F392800E19641 /* CreatePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePhotoViewController.swift; sourceTree = "<group>"; };
 		429277A7198F393500E19641 /* CreateCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCheckinViewController.swift; sourceTree = "<group>"; };
 		CD21BA101DBDCBDA00362B02 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CD7C83D11DBEDBF60061331D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		CD7C83D21DBEDBF60061331D /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		CD7C83D31DBEDBF60061331D /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		CD7C83DA1DBEF0700061331D /* LightboxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightboxTransition.swift; path = ../LightboxTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				42167674198EAAC6008CCBC3 /* View Controllers */,
+				CD7C83D71DBEE3960061331D /* Transitions */,
 				42167655198E3220008CCBC3 /* AppDelegate.swift */,
+				CD7C83D11DBEDBF60061331D /* Common.swift */,
 				42167659198E3220008CCBC3 /* Main.storyboard */,
-				CD21BA101DBDCBDA00362B02 /* PhotoViewController.swift */,
 				4216765C198E3220008CCBC3 /* Images.xcassets */,
 				42167653198E3220008CCBC3 /* Supporting Files */,
 			);
@@ -131,6 +140,7 @@
 		42167674198EAAC6008CCBC3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD21BA101DBDCBDA00362B02 /* PhotoViewController.swift */,
 				42167679198ECE88008CCBC3 /* NewsFeedViewController.swift */,
 				42167677198ECE0E008CCBC3 /* RequestsViewController.swift */,
 				429277A1198F35B600E19641 /* MessagesViewController.swift */,
@@ -142,6 +152,16 @@
 				429277A7198F393500E19641 /* CreateCheckinViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CD7C83D71DBEE3960061331D /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C83D21DBEDBF60061331D /* BaseTransition.swift */,
+				CD7C83D31DBEDBF60061331D /* FadeTransition.swift */,
+				CD7C83DA1DBEF0700061331D /* LightboxTransition.swift */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,11 +269,15 @@
 				429277A2198F35B600E19641 /* MessagesViewController.swift in Sources */,
 				42167676198ECA7C008CCBC3 /* NotificationsViewController.swift in Sources */,
 				42167656198E3220008CCBC3 /* AppDelegate.swift in Sources */,
+				CD7C83D41DBEDBF60061331D /* Common.swift in Sources */,
 				429277A6198F392800E19641 /* CreatePhotoViewController.swift in Sources */,
 				429277A4198F391500E19641 /* CreateStatusViewController.swift in Sources */,
 				429277A8198F393500E19641 /* CreateCheckinViewController.swift in Sources */,
+				CD7C83DB1DBEF0700061331D /* LightboxTransition.swift in Sources */,
+				CD7C83D61DBEDBF60061331D /* FadeTransition.swift in Sources */,
 				42167678198ECE0E008CCBC3 /* RequestsViewController.swift in Sources */,
 				42167673198EAABC008CCBC3 /* SettingsViewController.swift in Sources */,
+				CD7C83D51DBEDBF60061331D /* BaseTransition.swift in Sources */,
 				4216767A198ECE88008CCBC3 /* NewsFeedViewController.swift in Sources */,
 				CD21BA111DBDCBDA00362B02 /* PhotoViewController.swift in Sources */,
 			);

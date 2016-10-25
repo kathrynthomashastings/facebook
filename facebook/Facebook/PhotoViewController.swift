@@ -8,49 +8,76 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var donePanel: UIView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var photoActionsView: UIImageView!
     
     var image: UIImage!
+    var selectedImageView: UIImageView!
+    var lightboxTransition: LightboxTransition!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         imageView.image = image
-
+        
+        scrollView.contentSize = CGSize(width: 320, height: 600)
+        scrollView.delegate = self
+        scrollView.backgroundColor = UIColor(white: 0, alpha: 1)
     }
-    
     
     override func didReceiveMemoryWarning() {
-        
         super.didReceiveMemoryWarning()
-        
+
         // Dispose of any resources that can be recreated.
-    
     }
-    
     
     @IBAction func didPressDone(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
     
-    /*
-    // MARK: - Navigation
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        scrollView.backgroundColor = UIColor(white: 0, alpha: 0)
+        imageView.backgroundColor = UIColor(white: 0, alpha: 0)
+        
+        donePanel.isHidden = true
+        photoActionsView.isHidden = true
+    }
 
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        let scrollY = scrollView.contentOffset.y
+        
+        if scrollY > 100 {
+            dismiss(animated: true, completion: nil)
+        } else {
+            donePanel.isHidden = false
+            photoActionsView.isHidden = false
+        }
+    }
+    
+    
+    
+
+    // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let photoViewController = segue.destination as! PhotoViewController
+        
+        photoViewController.image = selectedImageView.image
+        
+        photoViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        lightboxTransition = LightboxTransition()
+        photoViewController.transitioningDelegate = lightboxTransition
+        lightboxTransition.duration = 00.3
     }
- */
 
 
 }
