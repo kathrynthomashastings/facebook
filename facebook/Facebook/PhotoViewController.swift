@@ -19,7 +19,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     var image: UIImage!
     var selectedImageView: UIImageView!
     var lightboxTransition: LightboxTransition!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.contentSize = CGSize(width: 320, height: 600)
         scrollView.delegate = self
-        scrollView.backgroundColor = UIColor(white: 0, alpha: 1)
+        self.view.backgroundColor = UIColor(white: 0, alpha: 1)
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,33 +42,31 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // This method is called as the user scrolls
+        self.view.backgroundColor = UIColor(white: 0, alpha: 0)
+    }
+    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        scrollView.backgroundColor = UIColor(white: 0, alpha: 0)
-        imageView.backgroundColor = UIColor(white: 0, alpha: 0)
-        
         donePanel.isHidden = true
         photoActionsView.isHidden = true
     }
 
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
         let scrollY = scrollView.contentOffset.y
         
         if scrollY > 100 {
             dismiss(animated: true, completion: nil)
         } else {
+            self.view.backgroundColor = UIColor(white: 0, alpha: 1)
             donePanel.isHidden = false
             photoActionsView.isHidden = false
         }
     }
     
-    
-    
-
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let photoViewController = segue.destination as! PhotoViewController
         
         photoViewController.image = selectedImageView.image
